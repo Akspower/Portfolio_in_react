@@ -457,11 +457,18 @@ nav .fa-solid{
     .copyright{
         font-size: 13px;
     }
+    .services-list{
+        display: flex;
+        flex-direction: column;
+    }
+    #portfolio > .container> .work-list{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
-
-/* changed by abhishek */
-
-a{
-    text-decoration: none;
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
 }
