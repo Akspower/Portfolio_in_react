@@ -6,18 +6,21 @@ const projects = [
     shortDescription: 'A dynamic web application to manage a fictional heist team, featuring real-time updates and team management capabilities.',
     liveLink: 'https://money-heist-tau.vercel.app/',
     githubLink: 'https://github.com/Akspower/money-heist',
+    imageUrl: 'https://deadline.com/wp-content/uploads/2018/04/casa-de-papel-money-heist.jpeg'
   },
   {
     title: 'Spotify Clone',
     shortDescription: 'A fully functional Spotify clone that emulates core features like music playback and playlist creation.',
     liveLink: 'https://spotify-clone-eta-green.vercel.app/',
     githubLink: 'https://github.com/Akspower/spotify-clone',
+    imageUrl: 'https://k4p2f2g6.rocketcdn.me/wp-content/uploads/2023/06/Spotifys-desktop-gets-a-new-look.jpg'
   },
   {
     title: 'Meal Management',
     shortDescription: 'A web application that allows users to search for food recipes by country and name using an external API.',
     liveLink: 'https://meal-react.vercel.app/',
     githubLink: 'https://github.com/Akspower/Meal-React',
+    imageUrl: 'https://media.istockphoto.com/id/1159239928/photo/indian-food-and-indian-cuisine-dishes-top-view.jpg?s=612x612&w=0&k=20&c=hIRU_mlspmfKQtiTH26x2g3JTjygbwvFeHrPTZnTXNc=' // Added imageUrl
   },
   {
     title: 'Usability Hub Clone',
@@ -54,6 +57,9 @@ const Projects = () => {
         {projects.map((project, index) => (
           <div key={index} className="bg-gray-800 p-6 flex flex-col justify-between rounded-md shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl h-full m-2">
             <div>
+              {project.imageUrl && ( // Check if imageUrl exists before rendering
+                <img src={project.imageUrl} alt={project.title} className="w-full h-48 object-cover rounded-md mb-3" />
+              )}
               <h3 className="text-2xl font-semibold mb-3">{project.title}</h3>
               <p className="text-gray-400 mb-3 italic">{project.shortDescription}</p>
             </div>
