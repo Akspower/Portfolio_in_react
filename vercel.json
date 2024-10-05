@@ -3,8 +3,7 @@
       "env": {
         "NODE_ENV": "production"
       },
-      "outputDirectory": "dist",
       "command": "npm run build"
     }
   }
- 
+  
