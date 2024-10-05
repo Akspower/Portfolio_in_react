@@ -1,0 +1,153 @@
+/* Cursor effect */
+.cursor-effect {
+  pointer-events: none;
+  position: fixed;
+  border-radius: 50%;
+  width: 12px; /* Slightly larger size of the circle */
+  height: 12px; /* Slightly larger size of the circle */
+  background: rgba(255, 255, 255, 0.8); /* Slightly more opaque */
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: transform 0.2s; /* Smooth transition for size change */
+}
+
+/* Disable cursor effect on mobile */
+@media (max-width: 640px) {
+  .cursor-effect {
+    display: none;
+  }
+}
+
+/* Button for more details */
+.more-details-button {
+  position: absolute;
+  bottom: 20px; /* Adjust this value to move the button higher or lower */
+  right: 10px; /* Position from the right edge */
+  background-color: #1d4ed8; /* Button color */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Padding inside the button */
+  border-radius: 9999px; /* Make the button rounded */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for the button */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+/* Button hover effects */
+.more-details-button:hover,
+.more-details-button:focus {
+  background-color: #1e40af; /* Darker shade on hover */
+  transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+/* Adjust button for smaller screens */
+@media (max-width: 768px) {
+  .more-details-button {
+    bottom: 10px; /* Adjust position */
+    right: 5px; /* Adjust position from the right edge */
+    padding: 8px 16px; /* Smaller padding for mobile */
+    font-size: 14px; /* Reduce font size */
+  }
+}
+
+/* Tech stack items with bullet points */
+.tech-stack-item {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+/* Add bullet points before each tech stack item */
+.tech-stack-item::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #4a90e2; /* Bullet point color */
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+/* Responsive layout for tech stack items */
+@media (max-width: 768px) {
+  .tech-stack-item {
+    font-size: 0.9rem; /* Adjust font size for mobile */
+    padding-left: 1rem;
+  }
+}
+
+/* Tech stack container responsive layout */
+.tech-stack-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Spacing between items */
+  justify-content: center; /* Center items on smaller screens */
+}
+
+@media (max-width: 768px) {
+  .tech-stack-container {
+    flex-direction: column;
+    align-items: center; /* Stack items vertically on mobile */
+  }
+}
+
+/* Screen Size Message Styles */
+.screen-size-message {
+  position: absolute;
+  top: 10px; /* Adjust top positioning */
+  left: 10px; /* Adjust left positioning */
+  z-index: 1000; /* Ensure it's above other content */
+  font-size: 1rem; /* Adjust font size */
+  color: rgba(255, 255, 255, 0.9); /* Make text slightly more visible */
+  background-color: rgba(0, 0, 0, 0.6); /* Optional: background for better contrast */
+  padding: 5px 10px; /* Optional: padding for better spacing */
+  border-radius: 5px; /* Optional: rounded corners */
+}
+
+/* Adjust styles for smaller screens */
+@media (max-width: 640px) {
+  .screen-size-message {
+    font-size: 0.8rem; /* Smaller font size on mobile */
+    left: 5px; /* Adjust positioning */
+    top: 5px; /* Adjust positioning */
+  }
+}
+
+.liquid-fill {
+  display: inline-block; /* Allow spacing to work correctly */
+  perspective: 1000px; /* Add perspective */
+}
+
+.liquid-fill .letter {
+  display: inline-block;
+  position: relative; /* Positioning for 3D effect */
+  font-size: 3rem; /* Default size (adjusted for better fit on small devices) */
+  color: #fff; /* Text color */
+  transition: transform 0.3s ease, text-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.liquid-fill .letter::before,
+.liquid-fill .letter::after {
+  content: attr(data-letter); /* Duplicate letters */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgba(255, 255, 255, 0.2); /* Shadow color */
+  z-index: -1; /* Position behind the text */
+}
+
+.liquid-fill .letter::before {
+  transform: translateZ(-5px); /* Move back for depth */
+}
+
+.liquid-fill .letter::after {
+  transform: translateZ(-10px); /* Move back for deeper effect */
+}
+
+.liquid-fill .letter:hover {
+  transform: translateY(-5px) rotateY(10deg); /* Slight lift and rotation */
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Shadow on hover */
+}
+
+/* Media Query for Smaller Devices */
+@media (max-width: 768px) {
+  .liquid-fill .letter {
+    font-size: 2.5rem; /* Further decrease the size for small devices */
+  }
+}
