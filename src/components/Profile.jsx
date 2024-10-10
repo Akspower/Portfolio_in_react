@@ -37,7 +37,7 @@ const Profile = () => {
     setTimeout(() => {
       setIsConfirmationPopupVisible(false);
       const link = document.createElement('a');
-      link.href = '/Aditya_srmist_CSE.pdf'; // Replace with actual resume path
+      link.href = '/Aditya_srmist_CSE.pdf'; 
       link.download = 'Aditya_Kumar_Sharma_Resume.pdf';
       link.click();
     }, 2000);

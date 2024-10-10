@@ -37,7 +37,7 @@ const projects = [
   {
     title: 'Blog Website',
     shortDescription: 'Developed a dynamic blog website utilizing Node.js, Express, and EJS for server-side rendering. Integrated an API to enhance functionality and provide dynamic content management.',
-    liveLink: 'https://github.com/Akspower/BLOG-API-PROJECT',  // Same link for demo and GitHub
+    liveLink: 'https://github.com/Akspower/BLOG-API-PROJECT',  
     githubLink: 'https://github.com/Akspower/BLOG-API-PROJECT',
   },
 ];
