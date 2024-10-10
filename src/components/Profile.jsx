@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import 'animate.css'; // Ensure animate.css is installed and imported
-import './profile.css'; // Import the CSS file
+import './Profile.css'; // Import the CSS file
 
 const Profile = () => {
   const [socialLinks] = useState({
