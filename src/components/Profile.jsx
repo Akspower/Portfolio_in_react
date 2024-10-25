@@ -30,6 +30,7 @@ const Profile = () => {
       circle.style.top = `${e.clientY}px`;
     }
   };
+  
 
   const handleResumeDownload = () => {
     setIsSarcasticPopupOpen(false);
