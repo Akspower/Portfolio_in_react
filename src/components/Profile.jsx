@@ -43,6 +43,7 @@ const Profile = () => {
       link.click();
     }, 2000);
   };
+  
 
   useEffect(() => {
     const handleClickOutside = (event) => {
